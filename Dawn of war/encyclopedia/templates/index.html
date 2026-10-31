@@ -1,6 +1,29 @@
 {% extends "base.html" %}
 {% block title %} Очень главная страница {% endblock title %}
 {% block content %}
-{% include "extensions/buttons.html" %}<br><br>
-{% include "extensions/cards.html" %}
+<div class="container">
+    <br><br>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for race in races %}
+            <div class="col">
+                <div class="card border-dark h-100">
+                    <img src="{{ url_for('static', filename=race.icon) }}">
+
+                    <div class="card-body">
+                        <h5 class="card-title">{{ race.name }}</h5>
+
+                        <p class="card-text">
+                            {{ race.content }}
+                        </p>
+
+                        <a href="{{ url_for('category', race_id=race.id) }}"
+                           class="btn btn-primary">
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock content %}
