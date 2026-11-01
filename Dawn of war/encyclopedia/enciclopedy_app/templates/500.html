@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %} Че-то на сервере {% endblock title %}
+{% block content %}
+<div class="container text-center py-5">
+
+    <div class="mb-4">
+        <h1 class="display-1 fw-bold text-danger">500</h1>
+        <h2 class="text-uppercase fw-bold">THE EMPEROR PROTECTS</h2>
+    </div>
+
+    <hr class="border-danger border-3 opacity-75">
+
+    <div class="my-5">
+        <h3 class="text-warning text-uppercase">
+            Критический сбой системы
+        </h3>
+
+        <p class="fs-5 text-dark">
+            Машинный дух Имперского архива вышел из-под контроля.
+        </p>
+
+        <p class="text-dark">
+            Священные механизмы отказали.
+            Причина сбоя неизвестна.
+            Возможно, в системе пробудилась ересь.
+        </p>
+    </div>
+
+    <div class="border border-danger p-4 mx-auto"
+         style="max-width: 600px;">
+
+        <p class="text-danger fw-bold mb-2">
+            ⚠ КРИТИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ
+        </p>
+
+        <p class="text-dark mb-0">
+            Адептус Механикус уведомлён о неисправности.
+            Не пытайтесь самостоятельно вмешиваться
+            в работу священных механизмов.
+            Ожидайте прибытия техножрецов.
+        </p>
+    </div>
+
+    <div class="mt-5">
+        <a href="{{ url_for('index') }}"
+           class="btn btn-outline-warning btn-lg">
+            Вернуться в Имперский архив
+        </a>
+    </div>
+
+    <div class="mt-5 text-dark small">
+        ADEPTUS MECHANICUS · IMPERIUM OF MAN
+        <br>
+        MACHINE SPIRIT FAILURE
+        <br>
+        IN THE NAME OF THE EMPEROR
+    </div>
+
+</div>
+{% endblock %}

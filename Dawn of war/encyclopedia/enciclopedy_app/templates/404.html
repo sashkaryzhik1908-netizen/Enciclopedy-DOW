@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %} Магнус не предавал {% endblock title %}
+{% block content %}
+<div class="container text-center py-5">
+
+    <div class="mb-4">
+        <h1 class="display-1 fw-bold text-danger">404</h1>
+        <h2 class="text-uppercase fw-bold">THE EMPEROR PROTECTS</h2>
+    </div>
+
+    <hr class="border-danger border-3 opacity-75">
+
+    <div class="my-5">
+        <h3 class="text-warning text-uppercase">
+            Объект не обнаружен
+        </h3>
+
+        <p class="fs-5 text-dark">
+            Запрашиваемый ресурс отсутствует в архивах Империума.
+        </p>
+
+        <p class="text-dark">
+            Возможно, он был уничтожен еретиками,
+            засекречен Инквизицией или никогда не существовал.
+        </p>
+    </div>
+
+    <div class="border border-danger p-4 mx-auto" style="max-width: 600px;">
+        <p class="text-danger fw-bold mb-2">
+            ⚠ ВНИМАНИЕ: НАРУШЕНИЕ ПРОТОКОЛА ДОСТУПА
+        </p>
+        <p class="text-dark mb-0">
+            Ваш запрос зарегистрирован Адептус Механикус.
+            Повторная попытка доступа может привлечь внимание Инквизиции.
+        </p>
+    </div>
+
+    <div class="mt-5">
+        <a href="{{ url_for('index') }}" class="btn btn-outline-warning btn-lg">
+            Вернуться в Имперский архив
+        </a>
+    </div>
+
+    <div class="mt-5 text-dark small">
+        ADEPTUS ADMINISTRATUM · IMPERIUM OF MAN
+        <br>
+        IN THE NAME OF THE EMPEROR
+    </div>
+
+</div>
+{% endblock %}

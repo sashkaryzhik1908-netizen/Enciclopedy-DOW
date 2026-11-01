@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %} Ты дурак штоле {% endblock title %}
+{% block content %}
+<div class="container text-center py-5">
+
+    <div class="mb-4">
+        <h1 class="display-1 fw-bold text-danger">505</h1>
+        <h2 class="text-uppercase fw-bold">THE EMPEROR PROTECTS</h2>
+    </div>
+
+    <hr class="border-danger border-3 opacity-75">
+
+    <div class="my-5">
+        <h3 class="text-warning text-uppercase">
+            Несовместимый протокол связи
+        </h3>
+
+        <p class="fs-5 text-dark">
+            Запрашиваемая версия протокола не признана
+            священными системами Империума.
+        </p>
+
+        <p class="text-dark">
+            Возможно, ваше устройство использует запрещённые
+            технологии Ксеносов или устаревшие системы связи.
+        </p>
+    </div>
+
+    <div class="border border-danger p-4 mx-auto"
+         style="max-width: 600px;">
+
+        <p class="text-danger fw-bold mb-2">
+            ⚠ ПРЕДУПРЕЖДЕНИЕ АДЕПТУС МЕХАНИКУС
+        </p>
+
+        <p class="text-dark mb-0">
+            Обнаружен несовместимый протокол передачи данных.
+            Немедленно прекратите попытки подключения
+            и обратитесь к техножрецу.
+        </p>
+    </div>
+
+    <div class="mt-5">
+        <a href="{{ url_for('index') }}"
+           class="btn btn-outline-warning btn-lg">
+            Вернуться в Имперский архив
+        </a>
+    </div>
+
+    <div class="mt-5 text-dark small">
+        ADEPTUS MECHANICUS · IMPERIUM OF MAN
+        <br>
+        IN THE NAME OF THE EMPEROR
+    </div>
+
+</div>
+{% endblock %}

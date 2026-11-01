@@ -1,19 +1,19 @@
 {% extends "base.html" %}
-{% block title %} Очень главная страница {% endblock title %}
+{% block title %} Разделы {{ current.name }} {% endblock title %}
 {% block content %}
 {% include "extensions/buttons.html" %}<br><br>
 <div class="container">
 <div class="card-group">
   <div class="card">
-    <img src="{{ url_for('static', filename=race.icon) }}" class="card-img-top" alt="...">
+    <img src="{{ url_for('static', filename=current.icon) }}" class="card-img-top" alt="...">
     <div class="card-body">
-         <a href="{{ url_for('race', race_id=race.id) }}">
+         <a href="{{ url_for('race', race_id=current.id) }}">
       <h5 class="card-title">UNITS</h5>
      </a>
     </div>
   </div>
   <div class="card">
-    <img src="{{ url_for('static', filename=vehicle.icon) }}" class="card-img-top" alt="...">
+    <img src="{{ url_for('static', filename=current.icon) }}" class="card-img-top" alt="...">
     <div class="card-body">
         <a href="">
       <h5 class="card-title"> VEHICLE</h5>
@@ -21,7 +21,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="{{ url_for('static', filename=build.icon) }}" class="card-img-top" alt="...">
+    <img src="{{ url_for('static', filename=current.icon) }}" class="card-img-top" alt="...">
     <div class="card-body">
         <a href="">
       <h5 class="card-title">BUILDINGS</h5>

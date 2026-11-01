@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %} Панель администратора {% endblock title %}
+{% block content %}<br><br>
+<div class="container">
+<form method="post" novalidate>
+  <div class="mb-3">
+      {{ form.csrf_token }}
+      {{ form.name(class="form-control", placeholder=form.name.label.text) }}<br>
+      {{ form.build_icon(class="form-control", placeholder=form.build_icon.label.text) }}<br>
+      {{ form.vehicle_icon(class="form-control", placeholder=form.vehicle_icon.label.text) }}<br><br>
+      {{ form.submit(class="btn btn-primary") }}
+  </div>
+</form>
+</div>
+{% endblock content %}
