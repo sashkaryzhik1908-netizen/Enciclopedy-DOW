@@ -13,17 +13,17 @@
     </div>
   </div>
   <div class="card">
-    <img src="{{ url_for('static', filename=current.icon) }}" class="card-img-top" alt="...">
+    <img src="{{ url_for('static', filename=current.vechicle_icon) }}" class="card-img-top" alt="...">
     <div class="card-body">
-        <a href="">
-      <h5 class="card-title"> VEHICLE</h5>
+        <a href="{{ url_for('vehicle', race_id=current.id) }}">
+      <h5 class="card-title">VEHICLE</h5>
       </a>
     </div>
   </div>
   <div class="card">
-    <img src="{{ url_for('static', filename=current.icon) }}" class="card-img-top" alt="...">
+    <img src="{{ url_for('static', filename=current.build_icon) }}" class="card-img-top" alt="...">
     <div class="card-body">
-        <a href="">
+        <a href="{{ url_for('buildings', race_id=current.id) }}">
       <h5 class="card-title">BUILDINGS</h5>
       </a>
     </div>

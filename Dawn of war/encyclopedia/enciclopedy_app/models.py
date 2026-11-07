@@ -33,6 +33,7 @@ class Building(db.Model):
     name = db.Column(db.String)
     race_id = db.Column(db.Integer, db.ForeignKey("races.id"))
     race = db.relationship("Race", back_populates="buildings")
+    icon = db.Column(db.String)
 
     def __repr__(self):
         return self.name
@@ -43,6 +44,7 @@ class Vehicle(db.Model):
     name = db.Column(db.String)
     race_id = db.Column(db.Integer, db.ForeignKey("races.id"))
     race = db.relationship("Race", back_populates="vehicles")
+    icon = db.Column(db.String)
 
     def __repr__(self):
         return self.name

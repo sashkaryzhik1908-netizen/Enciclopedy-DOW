@@ -1,44 +1,43 @@
-<div class="container">
-    <div class="row">
-        {% for unit in units %}
-            <div class="col-md-6 col-lg-4 mb-3">
-                <div class="card border-info h-100">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            {% if unit.icon %}
-                                <div class="ratio ratio-1x1">
-                                    <img
-                                        src="{{ url_for('static', filename=unit.icon) }}"
-                                        class="w-100 h-100 object-fit-contain rounded-start"
-                                        alt="{{ unit.name }}"
-                                    >
-                                </div>
-                            {% endif %}
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    <small class="text-body-secondary">
-                                        {{ unit.race.name }}
-                                    </small>
-                                </p>
+<div class="col-md-6 col-lg-4 mb-3">
+  <div class="card border-info h-100">
+    <div class="row g-0">
 
-                                <h5 class="card-title">
-                                   <a href="{{ url_for('units_detail', race_id=unit.race_id, unit_id=unit.id) }}">
-                                        {{ unit.name }}
-                                   </a>
-                                </h5>
+      {% if object.icon %}
+      <div class="col-md-4">
+        <div class="ratio ratio-1x1">
+          <img
+            src="{{ url_for('static', filename=object.icon) }}"
+            class="w-100 h-100 object-fit-contain rounded-start"
+            alt="{{ object.name }}"
+          >
+        </div>
+      </div>
+      {% endif %}
 
-                                <p class="card-text">
-                                    Описание юнита.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% else %}
-            <p>Юниты пока не добавлены.</p>
-        {% endfor %}
+      <div class="{% if object.icon %}col-md-8{% else %}col-12{% endif %}">
+        <div class="card-body">
+
+          <p class="card-text">
+            <small class="text-body-secondary">
+              {{ object.race.name }}
+            </small>
+          </p>
+
+          <h5 class="card-title">
+            <a href="{{ url_for(detail_endpoint,
+                            race_id=object.race_id,
+                            object_id=object.id) }}">
+              {{ object.name }}
+            </a>
+          </h5>
+
+          <p class="card-text">
+            Описание объекта.
+          </p>
+
+        </div>
+      </div>
+
     </div>
+  </div>
 </div>

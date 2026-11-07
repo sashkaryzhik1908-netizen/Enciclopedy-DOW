@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} {{ title }} {% endblock title %}
+{% block content %}
+{% include "extensions/buttons.html" %}<br><br>
+<div class="container">
+  <div class="row">
+    {% for object in units %}
+    {% with detail_endpoint="vehicle_detail" %}
+    {% include "extensions/cards.html" %}
+    {% endwith %}
+    {% else %}
+    <p>Юниты пока не добавлены.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}

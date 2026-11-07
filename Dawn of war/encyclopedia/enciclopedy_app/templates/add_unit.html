@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Добавление изображений зданий и техники{% endblock title %}
+{% block content %}<br><br>
+<!--Форма созданная для добавления юнитов-->
+<div class="container">
+<form action="{{ url_for('add_unit') }}" method="post" novalidate enctype="multipart/form-data">
+  <div class="mb-3">
+      <h2>Добавление юнитов</h2><br>
+      {{ form.hidden_tag() }}
+      {{ form.name.label(class="form-label") }}
+      {{ form.name(class="form-control") }}<br>
+      {{ form.race_id.label(class="form-label") }}
+      {{ form.race_id(class="form-control") }}<br>
+      {{ form.icon.label(class="form-label") }}
+      {{ form.icon(class="form-control") }} <br><br>
+      {{ form.submit(class="btn btn-primary") }}
+  </div>
+</form>
+</div>
+{% endblock content %}

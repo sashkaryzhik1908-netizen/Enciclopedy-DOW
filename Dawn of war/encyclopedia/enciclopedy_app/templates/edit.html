@@ -1,13 +1,18 @@
 {% extends "base.html" %}
-{% block title %} Панель администратора {% endblock title %}
+{% block title %}Добавление изображений зданий и техники{% endblock title %}
 {% block content %}<br><br>
+<!--Форма созданная для добавления изображений зданий и техники-->
 <div class="container">
-<form method="post" novalidate>
+<form action="{{ url_for('edit') }}" method="post" novalidate enctype="multipart/form-data">
   <div class="mb-3">
-      {{ form.csrf_token }}
-      {{ form.name(class="form-control", placeholder=form.name.label.text) }}<br>
-      {{ form.build_icon(class="form-control", placeholder=form.build_icon.label.text) }}<br>
-      {{ form.vehicle_icon(class="form-control", placeholder=form.vehicle_icon.label.text) }}<br><br>
+      <h2>Добавление изображений зданий и техники</h2><br>
+      {{ form.hidden_tag() }}
+      {{ form.name.label(class="form-label") }}
+      {{ form.name(class="form-control") }}<br>
+      {{ form.build_icon.label(class="form-label") }}
+      {{ form.build_icon(class="form-control") }}<br>
+      {{ form.vehicle_icon.label(class="form-label") }}
+      {{ form.vehicle_icon(class="form-control") }} <br><br>
       {{ form.submit(class="btn btn-primary") }}
   </div>
 </form>

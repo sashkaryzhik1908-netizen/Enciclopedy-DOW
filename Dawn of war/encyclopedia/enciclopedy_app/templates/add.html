@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Панель администратора {% endblock title %}
+{% block content %}<br><br><br><br><br>
+<div class="container d-flex justify-content-center">
+  <div class="card" style="width: 18rem;">
+    <img src="{{ url_for('static', filename='images/images.jpg') }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <p class="card-text">
+        <b>Это панель администратора</b>
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <a href="{{ url_for('edit') }}">Добавить изображения категорий техники и зданий</a>
+      </li>
+      <li class="list-group-item">
+        <a href="{{ url_for('add_unit') }}">Добавить юнита</a>
+      </li>
+      <li class="list-group-item">
+        <a href="{{ url_for('add_vehicle') }}">Добавить технику</a>
+      </li>
+      </li>
+      <li class="list-group-item">
+        <a href="{{ url_for('add_building') }}">Добавить здание</a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock content %}
